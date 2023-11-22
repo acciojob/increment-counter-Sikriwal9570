@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increment Counter</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <p id="counter">0</p>
+  <button id="incrementBtn" onclick="incrementCounter()">Increment</button>
+
+  <script>
+    function incrementCounter() {
+      // Get the current value of the counter
+      let currentCounterValue = parseInt(document.getElementById("counter").textContent);
+
+      // Display the un-incremented value using an alert
+      alert("Current Counter Value: " + currentCounterValue);
+
+      // Increment the counter value
+      currentCounterValue++;
+
+      // Update the counter value on the webpage
+      document.getElementById("counter").textContent = currentCounterValue;
+    }
+  </script>
 
 </body>
-
 </html>
